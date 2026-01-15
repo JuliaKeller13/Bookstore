@@ -1,0 +1,57 @@
+header {
+  width: auto;
+  height: 110px;
+  background: linear-gradient(135deg, #2b2f55, #1e152b);
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.header-inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 160px;
+  margin-right: 160px;
+}
+
+header a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-link{
+    font-size: 28px;
+}
+
+nav {
+  padding-left: 0;
+  display: flex;
+  height: 100%;
+}
+
+.hauptmenu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  font-size: 18px;
+}
+
+.hauptmenu ul a {
+  text-transform: uppercase;
+  margin-left: 16px;
+}
+
+.hauptmenu ul a:hover {
+  color: orangered;
+  transition: color 0.2s ease, border-bottom 0.1s ease;
+  filter: drop-shadow(0px 0px 8px #ea8e0e);
+}

@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" href="./assets/icons/books.png" type="image/png">
-    <title>Bookstore</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./styles/header.css">
+  <link rel="stylesheet" href="./styles/bookcards.css">
+  <link rel="shortcut icon" href="./assets/icons/favicon.png" type="image/png">
+  <title>Bookstore</title>
 </head>
-<body>
-    <header>
-      <div class="header-inner">
-        <a href="./index.html" class="logo-link">BOOKSTORE</a>
-        <nav class="hauptmenu">
-          <ul>
-            <li><a href="./index.html">Start</a></li>
-            <li><a href="#">Genres</a></li>
-            <li><a href="#">Bestellers</a></li>
-            <li><a href="#">Kontakt</a></li>
-          </ul>
-        </nav>
-      
-        <!-- <div class="off-screen-menu">
+
+<body onload="renderBookCards()">
+  <header>
+    <div class="header-inner">
+      <a href="./index.html" class="logo-link">BOOKSTORE</a>
+      <nav class="hauptmenu">
+        <ul>
+          <li><a href="./index.html">Start</a></li>
+          <li><a href="#">Genres</a></li>
+          <li><a href="#">Bestellers</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <!-- <div class="off-screen-menu">
           <ul>
             <li><a href="./index.html">Start</a></li>
             <li><a href="#">Genres</a></li>
@@ -35,11 +39,15 @@
             <span></span>
           </div>
         </nav> -->
-      </div>
-    </header>
-    <main class="body-content">
-        
-    </main>
-    <script src="./scripts/ham-menu.js"></script>
+    </div>
+  </header>
+  <main class="body-content">
+    <section class="book-card-section" id="bookCardSection">
+
+    </section>
+  </main>
+  <script src="./scripts/ham-menu.js"></script>
+  <script src="./script.js"></script>
 </body>
+
 </html>

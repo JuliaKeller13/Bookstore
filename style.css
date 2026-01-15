@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .body-content {
     min-height: 100vh;
 
@@ -13,4 +18,12 @@
 
     color: white;
     font-family: "Inter", sans-serif;
+}
+
+.book-card-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
 }

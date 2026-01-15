@@ -172,4 +172,20 @@ let books = [
         }
       ]
     }
-  ]
+  ];
+
+  function renderBookCards() {
+  const bookCardSectionRef = document.getElementById("bookCardSection");
+
+  for (let indexBook = 0; indexBook < books.length; indexBook++) {
+    bookCardSectionRef.innerHTML += getBooksHtml(indexBook);
+  }
+}
+
+function getBooksHtml(indexBook) {
+  return `
+    <div class="book-card" tabindex="0">
+      <h3>${books[indexBook].name}</h3>
+    </div>
+  `;
+}
