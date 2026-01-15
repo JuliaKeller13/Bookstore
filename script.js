@@ -1,6 +1,7 @@
 let books = [
     {
       "name": "Die Geheimnisse des Ozeans",
+      "cover": "./assets/images/die-geheimnisse-des-ozeans.png",
       "author": "Clara Meer",
       "likes": 1250,
       "liked": true,
@@ -32,6 +33,7 @@ let books = [
     },
     {
       "name": "Der vergessene Pfad",
+      "cover": "./assets/images/der-vergessene-pfad.png",
       "author": "Maximilian Schwarz",
       "likes": 980,
       "liked": false,
@@ -42,6 +44,7 @@ let books = [
     },
     {
       "name": "Die Farben des Himmels",
+      "cover": "./assets/images/die-farben-des-himmels.png",
       "author": "Laura Blau",
       "likes": 1520,
       "liked": true,
@@ -73,6 +76,7 @@ let books = [
     },
     {
       "name": "Das Rätsel der Zeit",
+      "cover": "./assets/images/das-raetsel-der-zeit.png",
       "author": "Alexander Weiss",
       "likes": 750,
       "liked": false,
@@ -174,6 +178,8 @@ let books = [
     }
   ];
 
+
+
   function renderBookCards() {
   const bookCardSectionRef = document.getElementById("bookCardSection");
 
@@ -182,10 +188,3 @@ let books = [
   }
 }
 
-function getBooksHtml(indexBook) {
-  return `
-    <div class="book-card" tabindex="0">
-      <h3>${books[indexBook].name}</h3>
-    </div>
-  `;
-}
