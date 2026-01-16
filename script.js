@@ -184,9 +184,24 @@ let books = [
   ];
 
   function renderBookCards() {
-  const bookCardSectionRef = document.getElementById("bookCardSection");
+  let bookCardSectionRef = document.getElementById("bookCardSection");
+  bookCardSectionRef.innerHTML = "";
 
   for (let indexBook = 0; indexBook < books.length; indexBook++) {
-    bookCardSectionRef.innerHTML += getBooksHtml(indexBook);
+    bookCardSectionRef.innerHTML += getBookCardsHtml(indexBook);
   }
+}
+
+function toggleLike(indexBook) {
+    let book = books[indexBook];
+
+    if (book.liked) {
+        book.likes--;
+        book.liked = false;
+    } else {
+        book.likes++;
+        book.liked = true;
+    }
+
+    renderBookCards();
 }
