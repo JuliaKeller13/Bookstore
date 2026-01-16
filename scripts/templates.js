@@ -3,7 +3,7 @@ function getBooksHtml(indexBook) {
     <div class="book-card" tabindex="0">
       <h3>${books[indexBook].title}</h3>
       <img src="${books[indexBook].cover}" alt="${books[indexBook].title}" class="cover-img">
-      <div class="book-info-section">
+      <div class="book-info-section info-text">
         <p class="book-info">Autor: ${books[indexBook].author}</p>
         <p>Erschien: ${books[indexBook].publishedYear}</p>
         <p>Genre: ${books[indexBook].genre}</p>
