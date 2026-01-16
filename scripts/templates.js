@@ -15,7 +15,11 @@ function getBookCardsHtml(indexBook) {
           <p class="price">${books[indexBook].price.toFixed(2)}€</p>
           <div class="like-amount">
             <button id="likeButton-${indexBook}" class="like-button" onclick="toggleLike(${indexBook})">
-              <img src="./assets/icons/heart.png" alt="like" style="width:22px" />
+              <img
+                src="./assets/icons/heart.png"
+                alt="like"
+                class="${books[indexBook].liked ? 'liked' : ''}"
+              />
             </button>
             <p>${books[indexBook].likes}</p>
           </div>

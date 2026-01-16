@@ -6,11 +6,11 @@
 }
 
 .like-button img {
-  width: 20px;
   height: 20px;
   display: block;
   transition: transform 0.2s ease, filter 0.2s ease;
   filter: sepia(1);
+  cursor: pointer;
 }
 
 .like-button:hover img {
@@ -19,7 +19,11 @@
 }
 
 .like-button:active img {
-  transform: scale(1.4);
+  filter: none;
+}
+
+.like-button img.liked {
+  filter: none;
 }
 
 /*more info button*/
