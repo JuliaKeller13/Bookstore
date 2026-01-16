@@ -27,7 +27,7 @@
 }
 
 /*more info button*/
-.book-info-with-button button{
+.send-comment-button{
     background: rgba(255, 255, 255, 0.06);
     color: white;
     font-weight: 100;
@@ -35,9 +35,14 @@
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     padding: 5px;
+    
+}
+.send-comment-button img{
+    width: 50px;
+    height: 20px;
 }
 
-.book-info-with-button button:hover{
+.send-comment-button:hover{
     box-shadow: 0 0 10px #393f74;
     cursor: pointer;
 }

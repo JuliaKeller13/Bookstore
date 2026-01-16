@@ -183,6 +183,10 @@ let books = [
     }
   ];
 
+  function init(){
+    renderBookCards()
+  }
+  
   function renderBookCards() {
   let bookCardSectionRef = document.getElementById("bookCardSection");
   bookCardSectionRef.innerHTML = "";
