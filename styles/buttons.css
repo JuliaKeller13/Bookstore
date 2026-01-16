@@ -10,6 +10,7 @@
   height: 20px;
   display: block;
   transition: transform 0.2s ease, filter 0.2s ease;
+  filter: sepia(1);
 }
 
 .like-button:hover img {

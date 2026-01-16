@@ -183,8 +183,6 @@ let books = [
     }
   ];
 
-
-
   function renderBookCards() {
   const bookCardSectionRef = document.getElementById("bookCardSection");
 
