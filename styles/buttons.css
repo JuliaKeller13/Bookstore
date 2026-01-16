@@ -1,0 +1,13 @@
+.like-button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.like-button img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
