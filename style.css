@@ -13,17 +13,12 @@ body {
     background-attachment: fixed;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    top: -10%;
-    right: -5%;
-    width: 60vw;
-    height: 60vw;
-    background: radial-gradient(circle, rgba(90, 40, 120, 0.15) 0%, transparent 70%);
-    filter: blur(80px);
-
-}
+.body-content{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+}        
 
 .book-card-section {
     display: flex;
@@ -31,5 +26,5 @@ body::before {
     align-items: center;
     flex-wrap: wrap;
     gap: 40px;
-    padding: 80px 160px 80px 160px;
+    padding: 60px;
 }
