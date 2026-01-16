@@ -96,7 +96,7 @@ let books = [
     },
     {
       "title": "Der letzte Wächter",
-      "cover": "./assets/images/die-geheimnisse-des-ozeans.png",
+      "cover": "./assets/images/der-letzte-waechter.png",
       "author": "Sabine Grün",
       "likes": 1300,
       "liked": true,
@@ -107,7 +107,7 @@ let books = [
     },
     {
       "title": "Im Schatten des Mondes",
-      "cover": "./assets/images/die-geheimnisse-des-ozeans.png",
+      "cover": "./assets/images/im-schatten-des-mondes.png",
       "author": "Philipp Silber",
       "likes": 890,
       "liked": false,
@@ -127,7 +127,7 @@ let books = [
     },
     {
       "title": "Jenseits der Sterne",
-      "cover": "./assets/images/die-geheimnisse-des-ozeans.png",
+      "cover": "./assets/images/jenseits-der-sterne.png",
       "author": "Oliver Schwarz",
       "likes": 1450,
       "liked": true,
@@ -143,7 +143,7 @@ let books = [
     },
     {
       "title": "Das verborgene Königreich",
-      "cover": "./assets/images/die-geheimnisse-des-ozeans.png",
+      "cover": "./assets/images/das-verborgene-koenigreich.png",
       "author": "Elena Gold",
       "likes": 920,
       "liked": false,
@@ -159,7 +159,7 @@ let books = [
     },
     {
       "title": "Liebe in Zeiten des Krieges",
-      "cover": "./assets/images/die-geheimnisse-des-ozeans.png",
+      "cover": "./assets/images/liebe-in-zeiten-des-krieges.png",
       "author": "Emilia Rot",
       "likes": 1800,
       "liked": true,
@@ -192,4 +192,3 @@ let books = [
     bookCardSectionRef.innerHTML += getBooksHtml(indexBook);
   }
 }
-
