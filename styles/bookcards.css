@@ -40,3 +40,12 @@
     align-items: center;
     gap: 7px;
 }
+
+.book-info-section{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
