@@ -6,11 +6,11 @@ function getBooksHtml(indexBook) {
       <p class="book-info">Autor: ${books[indexBook].author}</p>
       <div class="like-and-price">
         <p class="price">${books[indexBook].price} €</p>
-        <div>
-          <p>${books[indexBook].likes}</p>
+        <div class="like-amount">
           <button id="likeButton" class="like-button" onClick="like()">
             <img src="./assets/icons/heart.png" alt="like" style="width:22px"/>
           </button>
+          <p>${books[indexBook].likes}</p>
         </div>
       </div>
     </div>
