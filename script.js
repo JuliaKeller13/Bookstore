@@ -1,6 +1,6 @@
 let books = [
     {
-      "name": "Die Geheimnisse des Ozeans",
+      "title": "Die Geheimnisse des Ozeans",
       "cover": "./assets/images/die-geheimnisse-des-ozeans.png",
       "author": "Clara Meer",
       "likes": 1250,
@@ -32,7 +32,7 @@ let books = [
       ]
     },
     {
-      "name": "Der vergessene Pfad",
+      "title": "Der vergessene Pfad",
       "cover": "./assets/images/der-vergessene-pfad.png",
       "author": "Maximilian Schwarz",
       "likes": 980,
@@ -43,7 +43,7 @@ let books = [
       "comments": []
     },
     {
-      "name": "Die Farben des Himmels",
+      "title": "Die Farben des Himmels",
       "cover": "./assets/images/die-farben-des-himmels.png",
       "author": "Laura Blau",
       "likes": 1520,
@@ -75,7 +75,7 @@ let books = [
       ]
     },
     {
-      "name": "Das Rätsel der Zeit",
+      "title": "Das Rätsel der Zeit",
       "cover": "./assets/images/das-raetsel-der-zeit.png",
       "author": "Alexander Weiss",
       "likes": 750,
@@ -95,7 +95,8 @@ let books = [
       ]
     },
     {
-      "name": "Der letzte Wächter",
+      "title": "Der letzte Wächter",
+      "cover": "./assets/images/die-geheimnisse-des-ozeans.png",
       "author": "Sabine Grün",
       "likes": 1300,
       "liked": true,
@@ -105,7 +106,8 @@ let books = [
       "comments": []
     },
     {
-      "name": "Im Schatten des Mondes",
+      "title": "Im Schatten des Mondes",
+      "cover": "./assets/images/die-geheimnisse-des-ozeans.png",
       "author": "Philipp Silber",
       "likes": 890,
       "liked": false,
@@ -124,7 +126,8 @@ let books = [
       ]
     },
     {
-      "name": "Jenseits der Sterne",
+      "title": "Jenseits der Sterne",
+      "cover": "./assets/images/die-geheimnisse-des-ozeans.png",
       "author": "Oliver Schwarz",
       "likes": 1450,
       "liked": true,
@@ -139,7 +142,8 @@ let books = [
       ]
     },
     {
-      "name": "Das verborgene Königreich",
+      "title": "Das verborgene Königreich",
+      "cover": "./assets/images/die-geheimnisse-des-ozeans.png",
       "author": "Elena Gold",
       "likes": 920,
       "liked": false,
@@ -154,7 +158,8 @@ let books = [
       ]
     },
     {
-      "name": "Liebe in Zeiten des Krieges",
+      "title": "Liebe in Zeiten des Krieges",
+      "cover": "./assets/images/die-geheimnisse-des-ozeans.png",
       "author": "Emilia Rot",
       "likes": 1800,
       "liked": true,
