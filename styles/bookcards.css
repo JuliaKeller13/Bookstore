@@ -1,5 +1,5 @@
 .book-card {
-    height: 400px;
+    height: 500px;
     width: 300px;
     background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(14px);
@@ -9,8 +9,9 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    gap: 20px;
     padding: 20px;
 }
 
@@ -46,9 +47,11 @@
     width: 100%;
 }
 
-.book-info-with-button{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+.comments-container{
+    width: 100%;
+}
+
+.separator{
+    border: 1px solid rgba(255, 255, 255, 0.08);
     width: 100%;
 }

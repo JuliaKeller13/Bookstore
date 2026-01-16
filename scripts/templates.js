@@ -22,6 +22,11 @@ function getBookCardsHtml(indexBook) {
             <p>${books[indexBook].likes}</p>
           </div>
         </div>
+        <div class="separator"></div>
+        <div class="comments-container">
+        hier kommen die gerendete Kommentare
+        </div> 
+
       </div>
   `;
 }
@@ -29,7 +34,6 @@ function getBookCardsHtml(indexBook) {
 
      function getBookCommentsHtml(indexBook){
       return `
-        <div class="comments-container">
           <h3>Kommentare</h3>
           <div class="comments">
             <p></p>
@@ -49,6 +53,5 @@ function getBookCardsHtml(indexBook) {
               <img src="./assets/icons/send.png" alt="senden" class="send-icon" />
             </button>
           </form>
-        </div>      
         `;
      }
