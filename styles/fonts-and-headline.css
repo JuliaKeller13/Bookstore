@@ -24,7 +24,7 @@ h3 {
     font-weight: 200;
 }
 
-.input-group label{
+.input-group label, .no-comments{
     font-size: 14px;
     font-weight: 100;
 }

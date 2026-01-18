@@ -26,21 +26,22 @@ function getBookCardsHtml(indexBook) {
         </div>
 
         <div class="separator"></div>
-
+<h3>Kommentare</h3>
         <div class="comments-container">
-            ${getBookCommentsHtml(books.comments)}
+            
+            ${getBooksCommentsHtml(indexBook)}
         </div>
 
         <div class="input-comment">
-          <h3>Kommentare</h3>
+          
           <form id="commentForm-${indexBook}">
             <div class="input-group">
               <label for="userName-${indexBook}">Name:</label>
               <input type="text" id="userName-${indexBook}" name="name" placeholder="Dein Name..." required>
             </div>
             <div class="input-group">
-              <label for="userComment-${indexBook}">Kommentar:</label>
-              <textarea id="userComment-${indexBook}" name="comment" rows="3"
+              <label for="userComment-${indexBook}">Dein Kommentar:</label>
+              <textarea id="userComment-${indexBook}" name="comment" rows="2"
                 placeholder="Was sagst du zu diesem Buch?" required></textarea>
             </div>
             <div class="send-comment-button-container">
@@ -55,10 +56,21 @@ function getBookCardsHtml(indexBook) {
   `;
 }
 
-     function getBookCommentsHtml(indexBook){
-      return `
-          
-          
-          
-        `;
-     }
+function getBooksCommentsHtml(indexBook) {
+  let comments = books[indexBook].comments; 
+  let commentsContainer = "";
+
+  for (let i = 0; i < comments.length; i++) {
+    commentsContainer += `
+      <div class="comment-box info-text">
+        <b>${comments[i].name}</b>: ${comments[i].comment}
+      </div>
+    `;
+  }
+
+  if (comments.length === 0) {
+    return `<p class="no-comments">Noch keine Kommentare vorhanden.</p>`;
+  }
+
+  return commentsContainer;
+}

@@ -26,7 +26,6 @@
   filter: none;
 }
 
-/*more info button*/
 .send-comment-button{
     background: rgba(255, 255, 255, 0.06);
     color: white;
@@ -38,7 +37,7 @@
     
 }
 .send-comment-button img{
-    width: 50px;
+    width: 40px;
     height: 20px;
 }
 

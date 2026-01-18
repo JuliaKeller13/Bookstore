@@ -32,3 +32,20 @@ body {
 textarea {
     resize: vertical;
 }
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Der Griff beim Hovern */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
