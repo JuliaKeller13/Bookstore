@@ -28,3 +28,7 @@ body {
     gap: 40px;
     padding: 60px;
 }
+
+textarea {
+    resize: vertical;
+}

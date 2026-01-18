@@ -2,7 +2,9 @@ function getBookCardsHtml(indexBook) {
   return `
     <div class="book-card" tabindex="0">
         <h2>${books[indexBook].title}</h2>
+
         <img src="${books[indexBook].cover}" alt="${books[indexBook].title}" class="cover-img">
+
         <div class="book-info-section info-text">
           <p class="book-info"><strong>Autor:</strong> ${books[indexBook].author}</p>
           <p><strong>Erschien:</strong> ${books[indexBook].publishedYear}</p>
@@ -22,36 +24,41 @@ function getBookCardsHtml(indexBook) {
             <p>${books[indexBook].likes}</p>
           </div>
         </div>
-        <div class="separator"></div>
-        <div class="comments-container">
-        hier kommen die gerendete Kommentare
-        </div> 
 
-      </div>
+        <div class="separator"></div>
+
+        <div class="comments-container">
+            ${getBookCommentsHtml(books.comments)}
+        </div>
+
+        <div class="input-comment">
+          <h3>Kommentare</h3>
+          <form id="commentForm-${indexBook}">
+            <div class="input-group">
+              <label for="userName-${indexBook}">Name:</label>
+              <input type="text" id="userName-${indexBook}" name="name" placeholder="Dein Name..." required>
+            </div>
+            <div class="input-group">
+              <label for="userComment-${indexBook}">Kommentar:</label>
+              <textarea id="userComment-${indexBook}" name="comment" rows="3"
+                placeholder="Was sagst du zu diesem Buch?" required></textarea>
+            </div>
+            <div class="send-comment-button-container">
+              <button type="submit" class="send-comment-button">
+                <img src="./assets/icons/send.png" alt="senden" class="send-icon"/>
+              </button>
+            </div>
+          </form>
+        </div>
+
+    </div>
   `;
 }
 
-
      function getBookCommentsHtml(indexBook){
       return `
-          <h3>Kommentare</h3>
-          <div class="comments">
-            <p></p>
-          </div>
-          <form id="commentForm-${indexBook}">
-            <div class="input-group">
-              <label for="name">Name</label>
-              <input type="text" class="user-name" id="userComment-${indexBook}" name="name" placeholder="Dein Name..."
-                required>
-            </div>
-            <div class="input-group">
-              <label for="comment">Kommentar</label>
-              <textarea class="user-comment" id="userComment-${indexBook}" name="comment" rows="3"
-                placeholder="Was sagst du zu diesem Buch?" required></textarea>
-            </div>
-            <button type="submit" class="send-comment-button">
-              <img src="./assets/icons/send.png" alt="senden" class="send-icon" />
-            </button>
-          </form>
+          
+          
+          
         `;
      }
