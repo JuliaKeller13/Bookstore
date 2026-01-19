@@ -184,7 +184,8 @@ let books = [
 ];
 
 function init() {
-  renderBookCards()
+  getFromLocalStorage();
+  renderBookCards();
 }
 
 function renderBookCards() {
@@ -207,7 +208,7 @@ function like(indexBook) {
     book.liked = true;
   }
 
-  saveToLokalStorage();
+  saveToLocalStorage();
   renderBookCards();
 }
 
@@ -245,11 +246,16 @@ function addComment (event, indexBook){
     `.comments-container[data-book="${indexBook}"]`
   );
 
-  commentsContainer.innerHTML = getBooksCommentsHtml(indexBook);
+  commentsContainer.innerHTML = getBooksComments(indexBook);
 
-  saveToLokalStorage();
+  saveToLocalStorage();
 }
 
-function saveToLokalStorage() {
+function saveToLocalStorage() {
   localStorage.setItem("books", JSON.stringify(books));
+}
+
+function getFromLocalStorage() {
+  let modifiedBooks = JSON.parse(localStorage.getItem("books"));
+  books = modifiedBooks;
 }

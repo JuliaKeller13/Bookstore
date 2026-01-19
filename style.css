@@ -1,35 +1,42 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    min-height: 100vh;
-    background-image:
-        url('assets/icons/stardust.png'),
-        radial-gradient(circle at top left, #1f2239, transparent 60%),
-        radial-gradient(circle at bottom right, #3a1c40, transparent 60%),
-        linear-gradient(135deg, #0f1020, #15162b);
-    background-attachment: fixed;
+  min-height: 100vh;
+  background-image:
+    url('assets/icons/stardust.png'),
+    radial-gradient(circle at top left, #1f2239, transparent 60%),
+    radial-gradient(circle at bottom right, #3a1c40, transparent 60%),
+    linear-gradient(135deg, #0f1020, #15162b);
+  background-attachment: fixed;
 }
 
-.body-content{
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
-}        
+.body-content {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.filter-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
 
 .book-card-section {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 40px;
-    padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 ::-webkit-scrollbar {
