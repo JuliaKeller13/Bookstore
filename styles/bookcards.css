@@ -1,5 +1,5 @@
 .book-card {
-    width: 320px;
+    width: 300px;
     background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px); /*für Safari*/
