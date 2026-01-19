@@ -196,7 +196,7 @@ function renderBookCards() {
   }
 }
 
-function toggleLike(indexBook) {
+function like(indexBook) {
   let book = books[indexBook];
 
   if (book.liked) {
@@ -206,6 +206,20 @@ function toggleLike(indexBook) {
     book.likes++;
     book.liked = true;
   }
+
+  renderBookCards();
+}
+
+function addComment (event, indexBook){
+  event.preventDefault();
+
+  let nameInput = document.getElementById(`userName-${indexBook}`);
+  let commentInput = document.getElementById(`userComment-${indexBook}`);
+  let newComment = {"name": nameInput.value, "comment": commentInput.value};
+
+  books[indexBook].comments.push(newComment);
+  nameInput.value = ""; 
+  commentInput.value = "";
 
   renderBookCards();
 }

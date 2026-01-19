@@ -14,7 +14,7 @@ function getBookCardsHtml(indexBook) {
         <div class="like-and-price">
           <p class="price">${books[indexBook].price.toFixed(2)}€</p>
           <div class="like-amount">
-            <button id="likeButton-${indexBook}" class="like-button" onclick="toggleLike(${indexBook})">
+            <button id="likeButton-${indexBook}" class="like-button" onclick="like(${indexBook})">
               <img
                 src="./assets/icons/heart.png"
                 alt="like"
@@ -34,7 +34,7 @@ function getBookCardsHtml(indexBook) {
 
         <div class="input-comment">
           
-          <form id="commentForm-${indexBook}">
+          <form onsubmit="addComment (event, ${indexBook})" id="commentForm-${indexBook}">
             <div class="input-group">
               <label for="userName-${indexBook}">Name:</label>
               <input type="text" id="userName-${indexBook}" name="name" placeholder="Dein Name..." required>
