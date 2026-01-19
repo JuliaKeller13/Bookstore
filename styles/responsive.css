@@ -12,9 +12,14 @@
         padding: 16px;
     }
 
-    h2{
-       font-size: 16px;
-       font-weight: 300;
+    h2 {
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .like-button:hover img {
+        transform: none;
+        filter: none;
     }
 }
 
@@ -30,6 +35,4 @@
     }
 }
 
-@media (min-width: 780px) {
-  
-}
+@media (min-width: 780px) {}

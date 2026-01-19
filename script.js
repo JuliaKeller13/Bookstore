@@ -207,6 +207,7 @@ function like(indexBook) {
     book.liked = true;
   }
 
+  saveToLokalStorage();
   renderBookCards();
 }
 
@@ -227,4 +228,9 @@ function addComment (event, indexBook){
 
   commentsContainer.innerHTML = getBooksCommentsHtml(indexBook);
 
+  saveToLokalStorage();
+}
+
+function saveToLokalStorage() {
+  localStorage.setItem("books", JSON.stringify(books));
 }
