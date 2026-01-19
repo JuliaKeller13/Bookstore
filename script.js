@@ -184,6 +184,9 @@ let books = [
 ];
 
 function init() {
+  if (!localStorage.getItem("books")) {
+    saveToLocalStorage();
+  }
   getFromLocalStorage();
   renderBookCards();
 }
@@ -256,6 +259,11 @@ function saveToLocalStorage() {
 }
 
 function getFromLocalStorage() {
-  let modifiedBooks = JSON.parse(localStorage.getItem("books"));
-  books = modifiedBooks;
+  let modifiedBooks = localStorage.getItem("books");
+
+  if (modifiedBooks) {
+    books = JSON.parse(modifiedBooks);
+  } else {
+    saveToLocalStorage(); // Initialwert setzen
+  }
 }
