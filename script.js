@@ -211,6 +211,25 @@ function like(indexBook) {
   renderBookCards();
 }
 
+function getBooksComments(indexBook) {
+  let comments = books[indexBook].comments; 
+  let commentsContainer = "";
+
+  for (let i = 0; i < comments.length; i++) {
+    commentsContainer += `
+      <div class="comment-box info-text">
+        <b>${comments[i].name}</b>: ${comments[i].comment}
+      </div>
+    `;
+  }
+
+  if (comments.length === 0) {
+    return `<p class="no-comments">Noch keine Kommentare vorhanden.</p>`;
+  }
+
+  return commentsContainer;
+}
+
 function addComment (event, indexBook){
   event.preventDefault();
 

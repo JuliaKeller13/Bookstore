@@ -33,7 +33,7 @@ function getBookCardsHtml(indexBook) {
           <summary>Kommentare</summary>
           <div>
           <div class="comments-container" data-book="${indexBook}">
-            ${getBooksCommentsHtml(indexBook)}
+            ${getBooksComments(indexBook)}
           </div>
 
           <div class="input-comment">
@@ -58,23 +58,4 @@ function getBookCardsHtml(indexBook) {
         </details>
     </div>
   `;
-}
-
-function getBooksCommentsHtml(indexBook) {
-  let comments = books[indexBook].comments; 
-  let commentsContainer = "";
-
-  for (let i = 0; i < comments.length; i++) {
-    commentsContainer += `
-      <div class="comment-box info-text">
-        <b>${comments[i].name}</b>: ${comments[i].comment}
-      </div>
-    `;
-  }
-
-  if (comments.length === 0) {
-    return `<p class="no-comments">Noch keine Kommentare vorhanden.</p>`;
-  }
-
-  return commentsContainer;
 }
