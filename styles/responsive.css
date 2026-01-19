@@ -1,0 +1,30 @@
+@media screen and (max-width: 780px) {
+    .hauptmenu {
+        display: none;
+    }
+
+    .book-card {
+        width: 260px;
+    }
+
+    .book-card-section {
+        gap: 20px;
+        padding: 16px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .header-inner {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+
+    .hauptmenu ul a {
+        margin-left: 12px;
+    }
+}
+
+@media (min-width: 780px) {
+  
+}

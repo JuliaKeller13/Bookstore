@@ -19,11 +19,11 @@
 }
 
 .cover-img{
-    width: 140px;
+    width: 120px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.like-and-price{
+.buy-and-price{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,14 +39,9 @@
 
 .book-info-section{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: start;
-    flex-direction: column;
     gap: 5px;
-    width: 100%;
-}
-
-.comments-container{
     width: 100%;
 }
 
@@ -56,11 +51,20 @@
 }
 
 /*comments*/
+summary{
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+details, .comments-container{
+    width: 100%;
+}
+
 .comments-container{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    height: 150px;
+    height: 120px;
     overflow-y: auto;
 }
 

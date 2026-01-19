@@ -221,5 +221,10 @@ function addComment (event, indexBook){
   nameInput.value = ""; 
   commentInput.value = "";
 
-  renderBookCards();
+  let commentsContainer = document.querySelector(
+    `.comments-container[data-book="${indexBook}"]`
+  );
+
+  commentsContainer.innerHTML = getBooksCommentsHtml(indexBook);
+
 }

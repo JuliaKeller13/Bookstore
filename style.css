@@ -17,13 +17,12 @@ body {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 16px;
 }        
 
 .book-card-section {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 40px;
     padding: 60px;
