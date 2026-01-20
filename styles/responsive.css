@@ -33,6 +33,10 @@
     .hauptmenu ul a {
         margin-left: 12px;
     }
+
+    .book-card {
+        width: 280px;
+    }
 }
 
 @media (min-width: 780px) {}

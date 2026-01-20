@@ -42,8 +42,8 @@ body {
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 40px;
-  margin: 20px 60px 60px 60px;
+  gap: 35px;
+  margin: 20px 50px 60px 50px;
 }
 
 textarea {
