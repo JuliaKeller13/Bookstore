@@ -91,7 +91,7 @@ function getFromLocalStorage() {
   if (modifiedBooks) {
     books = JSON.parse(modifiedBooks);
   } else {
-    saveToLocalStorage(); // Initialwert setzen
+    saveToLocalStorage();
   }
 }
 
