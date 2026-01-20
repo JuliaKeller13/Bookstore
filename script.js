@@ -1,3 +1,4 @@
+let currentGenre = "";
 let books = [
   {
     "title": "Die Geheimnisse des Ozeans",
@@ -183,6 +184,8 @@ let books = [
   }
 ];
 
+
+
 function init() {
   if (!localStorage.getItem("books")) {
     saveToLocalStorage();
@@ -195,8 +198,10 @@ function renderBookCards() {
   let bookCardSectionRef = document.getElementById("bookCardSection");
   bookCardSectionRef.innerHTML = "";
 
-  for (let indexBook = 0; indexBook < books.length; indexBook++) {
-    bookCardSectionRef.innerHTML += getBookCardsHtml(indexBook);
+  for (let i = 0; i < books.length; i++) {
+    if (currentGenre === "" || books[i].genre === currentGenre) {
+      bookCardSectionRef.innerHTML += getBookCardsHtml(i);
+    }
   }
 }
 
@@ -216,7 +221,7 @@ function like(indexBook) {
 }
 
 function getBooksComments(indexBook) {
-  let comments = books[indexBook].comments; 
+  let comments = books[indexBook].comments;
   let commentsContainer = "";
 
   for (let i = 0; i < comments.length; i++) {
@@ -234,15 +239,15 @@ function getBooksComments(indexBook) {
   return commentsContainer;
 }
 
-function addComment (event, indexBook){
+function addComment(event, indexBook) {
   event.preventDefault();
 
   let nameInput = document.getElementById(`userName-${indexBook}`);
   let commentInput = document.getElementById(`userComment-${indexBook}`);
-  let newComment = {"name": nameInput.value, "comment": commentInput.value};
+  let newComment = { "name": nameInput.value, "comment": commentInput.value };
 
   books[indexBook].comments.push(newComment);
-  nameInput.value = ""; 
+  nameInput.value = "";
   commentInput.value = "";
 
   let commentsContainer = document.querySelector(
@@ -265,5 +270,22 @@ function getFromLocalStorage() {
     books = JSON.parse(modifiedBooks);
   } else {
     saveToLocalStorage(); // Initialwert setzen
+  }
+}
+
+document.getElementById("genreFilter").addEventListener("change", function () {
+  currentGenre = document.getElementById("genreFilter").value;
+  renderBookCards();
+});
+
+function filterBooks() {
+  let selectedGenre = document.getElementById("genreFilter").value;
+  let bookCardSectionRef = document.getElementById("bookCardSection");
+  bookCardSectionRef.innerHTML = "";
+
+  for (let indexBook = 0; indexBook < books.length; indexBook++) {
+    if (selectedGenre === "" || books[indexBook].genre === selectedGenre) {
+      bookCardSectionRef.innerHTML += getBookCardsHtml(indexBook);
+    }
   }
 }

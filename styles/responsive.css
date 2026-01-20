@@ -9,7 +9,7 @@
 
     .book-card-section {
         gap: 20px;
-        padding: 16px;
+        margin: 16px 16px 50px 16px;
     }
 
     h2 {

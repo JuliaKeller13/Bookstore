@@ -9,6 +9,15 @@ a {
     color: white;
 }
 
+h1{
+    font-family: "Times new roman", sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    margin: 60px 10px 0 10px;
+}
+
 h2 {
     font-size: 18px;
     font-weight: 400;

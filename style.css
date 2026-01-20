@@ -23,7 +23,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.filter-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+  gap: 8px;
 }
 
 .book-card-section {
@@ -32,7 +42,7 @@ body {
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 40px;
-  padding: 60px;
+  margin: 20px 60px 60px 60px;
 }
 
 textarea {

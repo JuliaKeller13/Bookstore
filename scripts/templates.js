@@ -6,7 +6,7 @@ function getBookCardsHtml(indexBook) {
         <img src="${books[indexBook].cover}" alt="${books[indexBook].title}" class="cover-img">
         
         <div class="book-info-section info-text">
-          <div>
+          <div class="about-book">
             <p class="book-info"><strong>Autor:</strong> ${books[indexBook].author}</p>
             <p><strong>Erschien:</strong> ${books[indexBook].publishedYear}</p>
             <p><strong>Genre:</strong> ${books[indexBook].genre}</p>
@@ -40,7 +40,7 @@ function getBookCardsHtml(indexBook) {
             <form onsubmit="addComment (event, ${indexBook})" id="commentForm-${indexBook}">
               <div class="input-group">
                 <label for="userName-${indexBook}">Name:</label>
-                <input type="text" id="userName-${indexBook}" name="name" placeholder="Dein Name..." required>
+                <input type="text" id="userName-${indexBook}" name="name" autocomplete="given-name" placeholder="Dein Name..." required>
               </div>
               <div class="input-group">
                 <label for="userComment-${indexBook}">Dein Kommentar:</label>

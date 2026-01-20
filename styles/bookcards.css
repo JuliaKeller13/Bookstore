@@ -25,7 +25,7 @@
 
 .buy-and-price{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
 }
@@ -41,8 +41,13 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
-    gap: 5px;
     width: 100%;
+}
+
+.about-book{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
 
 .separator{
