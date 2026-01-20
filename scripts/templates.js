@@ -16,10 +16,11 @@ function getBookCardsHtml(indexBook) {
               <img
                 src="./assets/icons/heart.png"
                 alt="like"
+                id="likeIcon-${indexBook}"
                 class="${books[indexBook].liked ? 'liked' : ''}"
               />
             </button>
-            <p>${books[indexBook].likes}</p>
+            <p id="likeCount-${indexBook}">${books[indexBook].likes}</p>
           </div>
         </div>
         <div class="buy-and-price">

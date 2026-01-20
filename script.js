@@ -22,16 +22,20 @@ function renderBookCards() {
 function like(indexBook) {
   let book = books[indexBook];
 
-  if (book.liked) {
-    book.likes--;
-    book.liked = false;
-  } else {
-    book.likes++;
-    book.liked = true;
-  }
+  book.liked = !book.liked;
+  book.likes += book.liked ? 1 : -1;
 
   saveToLocalStorage();
-  renderBookCards();
+
+  const likeIcon = document.getElementById(`likeIcon-${indexBook}`);
+  const likeCount = document.getElementById(`likeCount-${indexBook}`);
+
+  if (likeIcon) {
+    likeIcon.classList.toggle("liked", book.liked);
+  }
+  if (likeCount) {
+    likeCount.textContent = book.likes;
+  }
 }
 
 function getBooksComments(indexBook) {
@@ -71,6 +75,10 @@ function addComment(event, indexBook) {
   commentsContainer.innerHTML = getBooksComments(indexBook);
 
   saveToLocalStorage();
+
+  setTimeout(() => {
+    commentsContainer.scrollTop = commentsContainer.scrollHeight;
+  }, 0);
 }
 
 function saveToLocalStorage() {
