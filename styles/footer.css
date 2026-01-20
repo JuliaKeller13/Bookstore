@@ -1,5 +1,6 @@
 footer{
     height: 100px;
+    flex-shrink: 0;
     background: #1e152b;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     display: flex;
